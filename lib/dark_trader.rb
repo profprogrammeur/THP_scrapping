@@ -26,7 +26,16 @@ def create_crypto_hash
     puts "Oups petite erreur, mais c'est pas grave" #résultat que tu veux voir en lieu et place d'une erreur terminal
   end
 
- return Hash[symbol_list.zip(value_list)]
+    cryptos_array_of_hashs = []
+    for i in 0..symbol_list.length-1 do 
+     cryptos_array_of_hashs[i] = Hash.new
+      cryptos_array_of_hashs[i][symbol_list[i]] = value_list[i]
+    end
+    puts cryptos_array_of_hashs
+ return cryptos_array_of_hashs
+
 end
 
-puts create_crypto_hash
+create_crypto_hash
+
+

@@ -17,7 +17,7 @@ Launch the ruby files from the root directory.
 ```ruby /lib/dark_trader.rb```
 or
 ```ruby /lib/mairie_christmas.rb```
-You will get text files with the results of the programms.
+You will get an array of hashs with the results of the programms.
 
 ## Testing
 From the **root directory** :

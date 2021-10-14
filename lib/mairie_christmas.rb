@@ -14,17 +14,16 @@ end
 # print cities_url_95
 
 def cities_95
-  page = Nokogiri::HTML(URI.open("https://annuaire-des-mairies.com/val-d-oise.html"))
-    cities_95 = page.xpath('//a[@class="lientxt"]') 
-  return cities_95
+      page = Nokogiri::HTML(URI.open("https://annuaire-des-mairies.com/val-d-oise.html"))
+        cities_95 = page.xpath('//a[@class="lientxt"]') 
+      return cities_95
 end
-# puts city_95
+# puts cities_95
 
 def get_city_email
   list_mail = cities_url_95.map{ |x| 
       Nokogiri::HTML(URI.open(x)).xpath('//*[contains(text(), "@")]')
         }
-
   mail_hash = []
     for a in 0..cities_95.length-1 do 
       mail_hash[a] = Hash.new
